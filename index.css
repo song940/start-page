@@ -1,0 +1,41 @@
+@import url(https://lsong.org/css/stylesheet.css);
+@import url(https://lsong.org/stylesheets/form.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://images2.alphacoders.com/108/thumb-1920-1083636.jpg);
+    background-attachment: fixed;
+    background-position: 50%;
+}
+
+.header {
+    background-color: rgba(10, 10, 10, .05);
+}
+
+.form {
+    padding-top: 150px;
+    margin-bottom: -30px;
+}
+
+.form input {
+    color: #333 !important;
+    width: 50% !important;
+    height: 60px !important;
+    padding: 0 20px !important;
+    display: initial !important;
+    border-radius: 30px !important;
+    background-color: #fff !important;
+    font-family: -apple-system, 'Segoe UI', 'Open Sans', monospace;
+    box-shadow: 0 2px 9px rgba(0,0,0,0.1);
+}
+
+main {
+    background-color: hsla(0, 0%, 96.1%, .99);
+}
+
+@media screen and (max-width: 768px) {
+    .form input {
+        width: 100% !important;
+    }
+}
