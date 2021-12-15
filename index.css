@@ -1,6 +1,10 @@
 @import url(https://lsong.org/css/stylesheet.css);
 @import url(https://lsong.org/stylesheets/form.css);
 
+:root {
+  --link-color: #666;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -16,6 +20,7 @@ body {
 .form {
   padding-top: 150px;
   margin-bottom: -30px;
+  position: relative;
 }
 
 .form input {
@@ -23,11 +28,47 @@ body {
   width: 50% !important;
   height: 60px !important;
   padding: 0 20px !important;
+  border: none !important;
   display: initial !important;
   border-radius: 30px !important;
   background-color: #fff !important;
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
   font-family: -apple-system, 'Segoe UI', 'Open Sans', monospace;
+}
+
+.form input+ul {
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  width: 50% !important;
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-bottom-left-radius: 30px !important;
+  border-bottom-right-radius: 30px !important;
+}
+
+.form input:focus {
+  box-shadow: none !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.form input:focus+ul {
+  display: block !important;
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form input+ul li {
+  padding: 0 20px;
+}
+
+.form input+ul li:hover {
+  background-color: #eee;
 }
 
 main {
@@ -36,6 +77,7 @@ main {
 
 #app {
   padding-top: 100px;
+  min-height: 100vh;
 }
 
 h2, h3 {
@@ -43,7 +85,36 @@ h2, h3 {
 }
 
 @media screen and (max-width: 768px) {
-  .form input {
+  .form input,
+  .form input + ul {
     width: 100% !important;
   }
+}
+
+.sites {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0;
+}
+
+.site {
+  padding: 10px;
+  text-decoration: none;
+  user-select: none;
+}
+
+.site-icon {
+  overflow: hidden;
+  border: 30px solid #fff;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 5%);
+}
+
+.site-name {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
 }
