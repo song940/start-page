@@ -2,7 +2,7 @@
 @import url(https://lsong.org/stylesheets/form.css);
 
 :root {
-  --link-color: #666;
+  --title-color: #ffee80;
 }
 
 body {
@@ -100,6 +100,7 @@ h2, h3 {
 }
 
 .site {
+  color: #333 !important;
   padding: 10px;
   text-decoration: none;
   user-select: none;
